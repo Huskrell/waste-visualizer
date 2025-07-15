@@ -77,7 +77,7 @@ export default function PlasticWasteVisualizer() {
       ],
     ];
 
-    const overlay = L.imageOverlay("/plastic-texture.png", bounds, {
+    const overlay = L.imageOverlay("plastic-texture.png", bounds, {
       opacity: 0.8,
     }).addTo(map);
 
