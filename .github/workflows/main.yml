@@ -1,0 +1,16 @@
+# .github/workflows/deploy.yml
+name: Deploy Waste Visualizer
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: huskrell/vps-deploy/.github/workflows/astro-deploy.yml@main
+    with:
+      target-path: /var/www/waste-visualizer
+    secrets:
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

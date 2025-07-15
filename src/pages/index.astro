@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+export const prerender = true;
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import WasteMapVisualizer from "../components/WasteMapVisualizer";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="container">
+    <div>
+      <p>
+        Explore the scale of our plastic waste crisis. The circle represents
+        approximately 360 million tons of plastic waste generated globally each
+        year, visualized as if spread 10cm deep.
+      </p>
+    </div>
+
+    <div class="map-container">
+      <WasteMapVisualizer client:only="react" />
+    </div>
+
+    <div class="info-panel">
+      <h2>Understanding the Scale</h2>
+      <p>
+        The circle on the map represents the area that would be covered if all
+        360 million tons of annual global plastic waste were spread evenly at a
+        depth of 10 centimeters (about 4 inches).
+      </p>
+      <p>
+        This visualization helps put into perspective the enormous scale of our
+        global plastic waste problem and the urgent need for sustainable
+        solutions.
+      </p>
+
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-value" id="radiusValue">-</div>
+          <div class="stat-label">Circle Radius (km)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="areaValue">-</div>
+          <div class="stat-label">Total Area (km²)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">360M</div>
+          <div class="stat-label">Tons of Waste/Year</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">10cm</div>
+          <div class="stat-label">Assumed Depth</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
