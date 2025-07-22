@@ -1,52 +1,47 @@
-# Astro Starter Kit: Basics
+# Plastic Waste Visualizer
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+This project visualizes the global plastic waste footprint on an interactive map using [Leaflet](https://leafletjs.com/) and React. Users can search for any city or address to see how much area would be covered by 360 million tons of plastic waste.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Search for any location and visualize the plastic waste footprint.
+- Interactive map with adjustable waste radius and area display.
+- Uses OpenStreetMap tiles and a custom plastic texture overlay.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🧑‍💻 Getting Started
 
-## 🚀 Project Structure
+1. **Install dependencies:**
+   ```sh
+   pnpm install
+   ```
+2. **Start the development server:**
+   ```sh
+   pnpm dev
+   ```
+3. Open [http://localhost:4321](http://localhost:4321) in your browser.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🗂️ Project Structure
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- `src/components/WasteMapVisualizer.tsx` — Main map visualization component.
+- `src/utils/` — Utility functions for geocoding and waste calculations.
+- `public/plastic-texture.png` — Overlay texture for plastic waste.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📦 Build & Preview
 
-## 🧞 Commands
+- Build for production:
+  ```sh
+  pnpm build
+  ```
+- Preview the build:
+  ```sh
+  pnpm preview
+  ```
 
-All commands are run from the root of the project, from a terminal:
+## 📚 Learn More
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- [Astro Documentation](https://docs.astro.build)
+- [Leaflet Documentation](https://leafletjs.com/)
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Made with Astro & React.
