@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    uses: huskrell/vps-deploy/.github/workflows/astro-deploy.yml@main
+    uses: SmallHusk/vps-deploy/.github/workflows/astro-deploy.yml@main
     with:
       target-path: /var/www/waste-visualizer
     secrets:
